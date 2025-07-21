@@ -1,0 +1,177 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="700" viewBox="0 0 1000 700">
+  <!-- Styles -->
+  <style>
+    .title { font: bold 24px sans-serif; fill: #333; }
+    .subtitle { font: 16px sans-serif; fill: #666; }
+    .label { font: 14px sans-serif; fill: #333; }
+    .small-label { font: 12px sans-serif; fill: #666; }
+    .aws-orange { fill: #FF9900; }
+    .aws-dark { fill: #232F3E; }
+    .box { fill: white; stroke: #ddd; stroke-width: 2; rx: 5; ry: 5; }
+    .highlight-box { fill: #f8f8f8; stroke: #ddd; stroke-width: 2; rx: 5; ry: 5; }
+    .service-box { fill: white; stroke: #FF9900; stroke-width: 2; rx: 5; ry: 5; }
+    .arrow { stroke: #666; stroke-width: 2; marker-end: url(#arrowhead); }
+    .dashed-arrow { stroke: #666; stroke-width: 2; stroke-dasharray: 5,5; marker-end: url(#arrowhead); }
+    .flow-label { font: 12px sans-serif; fill: #666; }
+  </style>
+  
+  <!-- Markers -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#666" />
+    </marker>
+  </defs>
+  
+  <!-- Title -->
+  <text x="500" y="40" text-anchor="middle" class="title">PatentAnalyzer System Architecture</text>
+  <text x="500" y="65" text-anchor="middle" class="subtitle">AI Patent Prior Art Search and Infringement Detection System</text>
+  
+  <!-- Background Layers -->
+  <!-- Frontend Layer -->
+  <rect x="50" y="100" width="900" height="120" class="highlight-box" />
+  <text x="100" y="125" class="label">Frontend Layer</text>
+  
+  <!-- Backend Layer -->
+  <rect x="50" y="240" width="900" height="160" class="highlight-box" />
+  <text x="100" y="265" class="label">Backend Layer (EC2)</text>
+  
+  <!-- AWS Services Layer -->
+  <rect x="50" y="420" width="900" height="200" class="highlight-box" />
+  <text x="100" y="445" class="label">AWS Services Layer</text>
+  
+  <!-- Frontend Components -->
+  <rect x="150" y="140" width="120" height="60" class="box" />
+  <text x="210" y="175" text-anchor="middle" class="label">User Interface</text>
+  <text x="210" y="190" text-anchor="middle" class="small-label">(React)</text>
+  
+  <rect x="350" y="140" width="120" height="60" class="box" />
+  <text x="410" y="175" text-anchor="middle" class="label">Patent Submission</text>
+  <text x="410" y="190" text-anchor="middle" class="small-label">(React Components)</text>
+  
+  <rect x="550" y="140" width="120" height="60" class="box" />
+  <text x="610" y="175" text-anchor="middle" class="label">Analysis Dashboard</text>
+  <text x="610" y="190" text-anchor="middle" class="small-label">(React + Charts)</text>
+  
+  <rect x="750" y="140" width="120" height="60" class="box" />
+  <text x="810" y="175" text-anchor="middle" class="label">Admin Panel</text>
+  <text x="810" y="190" text-anchor="middle" class="small-label">(React Components)</text>
+  
+  <!-- Backend Components -->
+  <rect x="150" y="280" width="120" height="60" class="box" />
+  <text x="210" y="315" text-anchor="middle" class="label">Authentication</text>
+  <text x="210" y="330" text-anchor="middle" class="small-label">(Flask + JWT)</text>
+  
+  <rect x="350" y="280" width="120" height="60" class="box" />
+  <text x="410" y="315" text-anchor="middle" class="label">Patent Service</text>
+  <text x="410" y="330" text-anchor="middle" class="small-label">(Flask API)</text>
+  
+  <rect x="550" y="280" width="120" height="60" class="box" />
+  <text x="610" y="315" text-anchor="middle" class="label">Analysis Service</text>
+  <text x="610" y="330" text-anchor="middle" class="small-label">(NLP Processing)</text>
+  
+  <rect x="750" y="280" width="120" height="60" class="box" />
+  <text x="810" y="315" text-anchor="middle" class="label">Notification Service</text>
+  <text x="810" y="330" text-anchor="middle" class="small-label">(Alert Generation)</text>
+  
+  <!-- AWS Services -->
+  <rect x="150" y="480" width="120" height="60" class="service-box" />
+  <text x="210" y="505" text-anchor="middle" class="label">Amazon Cognito</text>
+  <text x="210" y="520" text-anchor="middle" class="small-label">(Authentication)</text>
+  
+  <rect x="350" y="480" width="120" height="60" class="service-box" />
+  <text x="410" y="505" text-anchor="middle" class="label">Amazon DynamoDB</text>
+  <text x="410" y="520" text-anchor="middle" class="small-label">(Data Storage)</text>
+  
+  <rect x="550" y="480" width="120" height="60" class="service-box" />
+  <text x="610" y="505" text-anchor="middle" class="label">Amazon Comprehend</text>
+  <text x="610" y="520" text-anchor="middle" class="small-label">(NLP & AI Engine)</text>
+  
+  <rect x="750" y="480" width="120" height="60" class="service-box" />
+  <text x="810" y="505" text-anchor="middle" class="label">Amazon SNS</text>
+  <text x="810" y="520" text-anchor="middle" class="small-label">(Notifications)</text>
+  
+  <!-- DynamoDB Tables -->
+  <rect x="250" y="560" width="80" height="30" class="box" />
+  <text x="290" y="580" text-anchor="middle" class="small-label">Users</text>
+  
+  <rect x="340" y="560" width="80" height="30" class="box" />
+  <text x="380" y="580" text-anchor="middle" class="small-label">Patents</text>
+  
+  <rect x="430" y="560" width="80" height="30" class="box" />
+  <text x="470" y="580" text-anchor="middle" class="small-label">Analysis</text>
+  
+  <rect x="520" y="560" width="80" height="30" class="box" />
+  <text x="560" y="580" text-anchor="middle" class="small-label">Keywords</text>
+  
+  <!-- Comprehend Features -->
+  <rect x="520" y="600" width="80" height="30" class="box" />
+  <text x="560" y="620" text-anchor="middle" class="small-label">Key Phrases</text>
+  
+  <rect x="610" y="600" width="80" height="30" class="box" />
+  <text x="650" y="620" text-anchor="middle" class="small-label">Entities</text>
+  
+  <!-- SNS Channels -->
+  <rect x="750" y="560" width="120" height="30" class="box" />
+  <text x="810" y="580" text-anchor="middle" class="small-label">Email/SMS Alerts</text>
+  
+  <!-- Connections -->
+  <!-- Frontend to Backend -->
+  <line x1="210" y1="200" x2="210" y2="280" class="arrow" />
+  <line x1="410" y1="200" x2="410" y2="280" class="arrow" />
+  <line x1="610" y1="200" x2="610" y2="280" class="arrow" />
+  <line x1="810" y1="200" x2="810" y2="280" class="arrow" />
+  
+  <!-- Backend to AWS Services -->
+  <line x1="210" y1="340" x2="210" y2="480" class="arrow" />
+  <line x1="410" y1="340" x2="410" y2="480" class="arrow" />
+  <line x1="610" y1="340" x2="610" y2="480" class="arrow" />
+  <line x1="810" y1="340" x2="810" y2="480" class="arrow" />
+  
+  <!-- Cross-Service Connections -->
+  <line x1="270" y1="310" x2="350" y2="310" class="arrow" />
+  <line x1="470" y1="310" x2="550" y2="310" class="arrow" />
+  <line x1="670" y1="310" x2="750" y2="310" class="arrow" />
+  
+  <!-- DynamoDB to Tables -->
+  <line x1="290" y1="540" x2="290" y2="560" class="arrow" />
+  <line x1="380" y1="540" x2="380" y2="560" class="arrow" />
+  <line x1="470" y1="540" x2="470" y2="560" class="arrow" />
+  <line x1="560" y1="540" x2="560" y2="560" class="arrow" />
+  
+  <!-- Comprehend to Features -->
+  <line x1="560" y1="540" x2="560" y2="600" class="arrow" />
+  <line x1="650" y1="540" x2="650" y2="600" class="arrow" />
+  
+  <!-- SNS to Channels -->
+  <line x1="810" y1="540" x2="810" y2="560" class="arrow" />
+  
+  <!-- Flow Labels -->
+  <text x="230" y="250" text-anchor="middle" class="flow-label">Authentication</text>
+  <text x="430" y="250" text-anchor="middle" class="flow-label">Patent Data</text>
+  <text x="630" y="250" text-anchor="middle" class="flow-label">Analysis Results</text>
+  <text x="830" y="250" text-anchor="middle" class="flow-label">Alerts</text>
+  
+  <!-- Cross-Service Flow Labels -->
+  <text x="310" y="295" text-anchor="middle" class="flow-label">User Data</text>
+  <text x="510" y="295" text-anchor="middle" class="flow-label">Patent for Analysis</text>
+  <text x="710" y="295" text-anchor="middle" class="flow-label">High Risk Alerts</text>
+  
+  <!-- Workflow Arrows -->
+  <path d="M 150,650 Q 250,670 350,650 Q 450,630 550,650 Q 650,670 750,650 Q 850,630 950,650" fill="none" stroke="#FF9900" stroke-width="3" stroke-dasharray="10,5" />
+  
+  <!-- Workflow Steps -->
+  <circle cx="150" cy="650" r="10" fill="#FF9900" />
+  <text x="150" y="680" text-anchor="middle" class="small-label">1. Submit</text>
+  
+  <circle cx="350" cy="650" r="10" fill="#FF9900" />
+  <text x="350" y="680" text-anchor="middle" class="small-label">2. Extract</text>
+  
+  <circle cx="550" cy="650" r="10" fill="#FF9900" />
+  <text x="550" y="680" text-anchor="middle" class="small-label">3. Analyze</text>
+  
+  <circle cx="750" cy="650" r="10" fill="#FF9900" />
+  <text x="750" y="680" text-anchor="middle" class="small-label">4. Alert</text>
+  
+  <circle cx="950" cy="650" r="10" fill="#FF9900" />
+  <text x="950" y="680" text-anchor="middle" class="small-label">5. Monitor</text>
+</svg>
